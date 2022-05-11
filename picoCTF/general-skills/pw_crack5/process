@@ -1,0 +1,26 @@
+- make some changes in code
+- comment out the user input
+- open a "dictionary.txt" file
+- add a loop over that file
+- strip the file's item
+- code will look like this
+
+```
+def level_5_pw_check():
+    #user_pw = input("Please enter correct password for flag: ")
+
+    f = open("dictionary.txt", "r")
+    for x in f:
+        user_pw = x.strip()
+        user_pw_hash = hash_pw(user_pw)
+
+        if( user_pw_hash == correct_pw_hash ):
+            print("Welcome back... your flag, user:")
+            decryption = str_xor(flag_enc.decode(), user_pw)
+            print(decryption)
+            return
+        print("That password is incorrect")
+
+
+
+```

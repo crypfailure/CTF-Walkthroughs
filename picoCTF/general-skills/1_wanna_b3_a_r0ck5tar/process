@@ -1,0 +1,82 @@
+- download the file lyrics.txt
+- that file contains the code in rockstar language
+- it is similar to previous challenge mus1c but this challenge takes input too
+- if you familiar with rockstar language then it great!! but if you aren't then don't worry, I don't know it either. Lets learn together
+- we will translate rockstar code into python by using rockstar-py(https://github.com/yyyyyyyan/rockstar-py.git)
+- after conversion, we try to run that code but it wont run successfully and showing some syntax error
+- time for debugging and resolves those errors, here we have to make the syntax correct only
+- finally, your code will look like this:
+
+```
+Rocknroll = True
+Silence = False
+a_guitar = 19
+Tommy = 44
+Music = 160
+the_music = input()
+if int(the_music) == a_guitar:
+    print("Keep on rocking!")
+    the_rhythm = input()
+    if int(the_rhythm) - Music == 0:
+        Tommy = 66
+        print(Tommy)
+        Music = 79
+        Jamming = 78
+        print(Music)
+        print(Jamming)
+        Tommy = 74
+        print(Tommy)
+        #They are dazzled audiences
+        print(it)
+        Rock = 86
+        print(it)
+        Tommy = 73
+        print(it)
+        #break
+        print("Bring on the rock!")
+    else:
+        print("That ain't it, Chief")
+        #break
+
+```
+- when we run this code and passing 19 as its first input, it will show "Keep on rocking!"
+- now enter second input 160, it will print some number and crashed bcz "it" is not defined
+- output will be like this
+```
+19
+Keep on rocking!
+160
+66
+79
+78
+74
+Traceback (most recent call last):
+  File "/home/kali/picoCTF/general-skills/1_wanna_b3_a_r0ck5tar/rockstar.py", line 20, in <module>
+    print(it)
+NameError: name 'it' is not defined
+
+```
+- if we match these nuumbers, there are all those number that are mentioned in our script except 86 and 73
+- now we will add those two number manually 
+
+```
+>>> flag =  """ 66
+... 79
+... 78
+... 74
+... 86
+... 73
+... """
+>>> 
+>>> flag
+' 66\n79\n78\n74\n86\n73\n'
+>>> 
+>>> for x in flag.split():
+...     print(chr(int(x)), end = '')
+... 
+BONJVI>>> 
+
+
+```
+
+FLAG: picoCTF{BONJVI}

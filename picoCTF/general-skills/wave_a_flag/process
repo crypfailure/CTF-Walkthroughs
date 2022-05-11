@@ -1,0 +1,11 @@
+- download the program binary
+
+================ first approach: ================
+
+- strings binary_name | grep -i 'picoCTF{'
+
+
+================ second approach: ================
+
+- give that binary the executable permissions 
+- run the binary and follow the given instructions

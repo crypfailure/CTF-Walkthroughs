@@ -1,0 +1,4 @@
+- decode the given string using base64 decode
+- and submit the obtained string into the flag format
+
+picoCTF{l3arn_th3_r0p35}
