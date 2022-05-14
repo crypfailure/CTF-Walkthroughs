@@ -1,2 +1,2 @@
-# CTF-Walkthroughs
-Repositories containing flags or walkthroughs of capture the flag(CTF) challenges.
+# ctf-walkthroughs
+Repositories containing flags and solutions of capture the flag(CTF) challenges.
